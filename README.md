@@ -11,7 +11,10 @@
 
 
 ### 預覽
+![image](https://github.com/Yys99522/JavaMVC/blob/main/preview/index.png)
 
+![image](https://github.com/Yys99522/JavaMVC/blob/main/preview/register.png)
 
+![image](https://github.com/Yys99522/JavaMVC/blob/main/preview/member.png)
 
 

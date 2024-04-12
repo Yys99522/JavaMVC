@@ -59,29 +59,6 @@ CREATE TABLE IF NOT EXISTS products (
   isavailable BOOLEAN
 );
 
-CREATE TABLE cart(
-cartID BIGINT PRIMARY KEY AUTO_INCREMENT,
-memberid BIGINT,
-statustype VARCHAR(10) NOT NULL,
-FOREIGN KEY (memberid) 
-REFERENCES gym.memberinfo (memberid)
-);
-
-
-CREATE TABLE cartdetal(
-cartID BIGINT,
-productid	BIGINT,
-price	DOUBLE,
-quantity	INT,
-statustype	VARCHAR(10),
-
-FOREIGN KEY(cartID)
-REFERENCES gym.cart(cartID),
-FOREIGN KEY (productid) 
-REFERENCES gym.products (productid)
-);
-
-
 
 INSERT INTO gym.products 
 (productname,descript,price,categoryy,image,isavailable) 
@@ -140,52 +117,8 @@ VALUES(
 );
 
 
-delimiter $$
-create procedure login (acc varchar(20))
-begin
-select username,userpasswd,uid from account where username=acc;
-end
-$$
-delimiter ;
-
-
-delimiter $$
-create procedure member (id bigint)	
-begin
-select membername,phone,sex,email,birthdate,county,district,address,identity from memberinfo,account where memberid=id and uid=id;
-end
-$$
-delimiter ;
-
-delimiter $$
-create procedure forget (acc varchar(20))	
-begin
-select username,email,uid,phone from account,memberinfo where username=acc and uid=memberid;
-end
-$$
-delimiter ;
-
-
-delimiter $$
-create procedure updatemember (name varchar(10),mail varchar(30),tel varchar(10),birth date, gender enum('1','2'),county_ varchar(10),district_ varchar(10),address_ varchar(30),id bigint)	
-begin
-update memberinfo set membername=name,email=mail,phone=tel,birthdate=birth,sex=gender,county=county_,district=district_,address=address_ where memberid=id;
-select * from memberinfo;
-end
-$$
-delimiter ;
-
-
 CREATE USER 'user'@'%' IDENTIFIED BY '1234';
-
-use gym;
 GRANT SELECT,INSERT,UPDATE ON GYM.* TO 'user'@'%';
-
-
-GRANT EXECUTE ON PROCEDURE gym.forget TO 'user'@'%';
-GRANT EXECUTE ON PROCEDURE gym.member TO 'user'@'%';
-GRANT EXECUTE ON PROCEDURE gym.login TO 'user'@'%';
-GRANT EXECUTE ON PROCEDURE gym.updatemember TO 'user'@'%';
 
 
 

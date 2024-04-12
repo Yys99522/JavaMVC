@@ -54,14 +54,14 @@ CREATE TABLE IF NOT EXISTS products (
   productname VARCHAR(10),
   descript TEXT,
   price DOUBLE(10,2),
-  categoryy VARCHAR(10),
+  category VARCHAR(10),
   image VARCHAR(20),
   isavailable BOOLEAN
 );
 
 
 INSERT INTO gym.products 
-(productname,descript,price,categoryy,image,isavailable) 
+(productname,descript,price,category,image,isavailable) 
 VALUES(
 "高强度重訓課",
 "全面的瑜伽課程，強調靈活性、核心肌群訓練和壓力紓解，幫助實現身體健康、內心平靜和精神平衡，達到身心靈的完美協調。",
@@ -72,7 +72,7 @@ VALUES(
 );
 
 INSERT INTO gym.products 
-(productname,descript,price,categoryy,image,isavailable)
+(productname,descript,price,category,image,isavailable)
 VALUES(
 '暴打渣男拳擊',
 '擊退渣男，釋放壓力，鍛煉身體，自信大增！暴打渣男拳擊，專注自我防衛和健康，享受挑戰和成長',

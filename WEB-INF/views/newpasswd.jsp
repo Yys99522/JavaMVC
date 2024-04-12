@@ -15,19 +15,9 @@
 		color: red;
 	}
 </style>
- 
- <script>
-    function success(){
-      var message='<%= session.getAttribute("success")%>';
-      if(message!="null"){
-        alert(message);
-        <% session.removeAttribute("success"); %>;
-      }
-    }
-</script>
 
 </head>
-<body onload="success()">
+<body>
 
 <div class="sectiontext">
        <form action="changepasswd" method="post" name="textpasswd">

@@ -15,7 +15,7 @@
     <div class="header">
         <div class="header-left">
             <div class="header-left-img">
-                <img src="img/icons4.png" alt="顯示異常" style="width: 100%;">
+                <img src="img/icons4.png" alt="" style="width: 100%;">
             </div>
             <div class="header-left-text">
                 健身鐵工廠

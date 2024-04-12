@@ -8,6 +8,13 @@
 <meta charset="UTF-8">
 <title>註冊</title>
 <link rel="stylesheet" href="css/style-register.css">
+<style>
+    a{
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
 </head>
 <body onload="cities()">
 	<div class="bg">
@@ -25,13 +32,13 @@
                     <img src="img/icons6.png" alt="">
                 </div>
                 <div class="header-right-text">
-                    <a id="login-link" href="index.jsp">會員登入</a>
+                    <a id="login-link" href="index">會員登入</a>
                 </div>
             </div>  
         </div>
         <div class="navbar">
             <div class="navbar1">公開課</div>
-            <div class="navbar2"><a id="link" href="menu.jsp">私教課程</a></div>
+            <div class="navbar2"><a id="link" href="menu">私教課程</a></div>
             <div class="navbar3">預約體驗</div>
         </div>
         <div class="article">

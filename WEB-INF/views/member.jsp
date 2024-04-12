@@ -38,7 +38,7 @@
 	    </div>
 	    <div class="navbar">
 	        <div class="navbar1">公開課</div>
-	        <div class="navbar2"><a id="link" href="menu.jsp">私教課程</a></div>
+	        <div class="navbar2"><a id="link" href="menu">私教課程</a></div>
 	        <div class="navbar3">預約體驗</div>
 	    </div>
 	    <div class="container-all">

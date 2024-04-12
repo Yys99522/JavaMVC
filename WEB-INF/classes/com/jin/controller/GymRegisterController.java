@@ -8,14 +8,14 @@ import javax.servlet.http.HttpSession;
 
 import com.jin.pojo.Account;
 import com.jin.pojo.Member;
-import com.jin.service.GymService;
+import com.jin.service.GymRegisterService;
 
 
 @Controller
 public class GymRegisterController {
 	
 	@Autowired
-	GymService service;
+	GymRegisterService service;
 	
 	@Autowired
 	private HttpSession session;

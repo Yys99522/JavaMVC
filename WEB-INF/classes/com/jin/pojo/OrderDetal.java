@@ -2,24 +2,24 @@ package com.jin.pojo;
 
 public class OrderDetal {
 
-	private int orderId;
-	private int productId;
+	private int orderid;
+	private int productid;
 	private double price;
 	private int quantity;
-	private String payMethod;
-	private String payStatus;
+	private String paymethod;
+	private String paystatus;
 	
-	public int getOrderId() {
-		return orderId;
+	public int getOrderid() {
+		return orderid;
 	}
-	public void setOrderId(int orderId) {
-		this.orderId = orderId;
+	public void setOrderid(int orderId) {
+		this.orderid = orderId;
 	}
-	public int getProductId() {
-		return productId;
+	public int getProductid() {
+		return productid;
 	}
-	public void setProductId(int productId) {
-		this.productId = productId;
+	public void setProductid(int productId) {
+		this.productid = productId;
 	}
 	public double getPrice() {
 		return price;
@@ -33,17 +33,17 @@ public class OrderDetal {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public String getPayMethod() {
-		return payMethod;
+	public String getPaymethod() {
+		return paymethod;
 	}
-	public void setPayMethod(String payMethod) {
-		this.payMethod = payMethod;
+	public void setPaymethod(String payMethod) {
+		this.paymethod = payMethod;
 	}
-	public String getPayStatus() {
-		return payStatus;
+	public String getPaystatus() {
+		return paystatus;
 	}
-	public void setPayStatus(String payStatus) {
-		this.payStatus = payStatus;
+	public void setPaystatus(String payStatus) {
+		this.paystatus = payStatus;
 	}
 	
 	

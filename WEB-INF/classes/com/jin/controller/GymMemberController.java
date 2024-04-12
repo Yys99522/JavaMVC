@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.jin.pojo.Member;
-import com.jin.service.GymService;
+import com.jin.service.GymMemberService;
 
 @Controller
 public class GymMemberController {
 	
 	@Autowired
-	GymService service;
+	GymMemberService service;
 	
 	@Autowired
 	private HttpSession session;
@@ -104,7 +104,6 @@ public class GymMemberController {
 		boolean check=service.checkPasswd(uid, passwd);
 		if(check) {
 			service.updatePasswd(uid, newpasswd);
-			session.setAttribute("success", "密碼修改成功");
 			return "redirect:/memberinfo";
 		}else {
 			session.setAttribute("check", "Invalid password");

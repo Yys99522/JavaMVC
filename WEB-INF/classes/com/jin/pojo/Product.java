@@ -7,7 +7,20 @@ public class Product {
 	private String descript;
 	private double price;
 	private String category;
-	private String img;
+	private String image;
+	
+	public Product() {
+		
+	}
+	
+	public Product(int id,String name,String descript,double price,String category,String image) {
+		this.productId=id;
+		this.productName=name;
+		this.descript=descript;
+		this.price=price;
+		this.category=category;
+		this.image=image;
+	}
 	
 	
 	public int getProductId() {
@@ -40,11 +53,11 @@ public class Product {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public String getImg() {
-		return img;
+	public String getImage() {
+		return image;
 	}
-	public void setImg(String img) {
-		this.img = img;
+	public void setImage(String image) {
+		this.image = image;
 	}
 	
 

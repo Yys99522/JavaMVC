@@ -9,16 +9,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jin.pojo.Account;
 import com.jin.pojo.Member;
-import com.jin.service.GymService;
+import com.jin.service.GymForgetService;
 
 @Controller
 public class GymForgetController {
 	
 	@Autowired
-	GymService service;
+	GymForgetService service;
 	
 	@Autowired
 	private HttpSession session;
+	
+	@RequestMapping("/verifyImg")
+	public String verifyImg() {
+		return "verifyImg";
+	}
 	
 	@RequestMapping("/forgetpasswd")
 	public String forgetpasswd(){
@@ -64,5 +69,7 @@ public class GymForgetController {
 		
 		return "redirect:/";
 	}
+	
+	
 
 }
